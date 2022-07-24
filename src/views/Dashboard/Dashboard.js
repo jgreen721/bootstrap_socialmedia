@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import {
@@ -32,7 +32,7 @@ const Dashboard = () => {
             <LinksCard user={user} />
             <WeatherCard />
             <div className="text-center link-div p-2">
-              <a href="#">View Profile</a>
+              <p className="text-primary">View Profile</p>
             </div>
           </div>
           <div className="column large-column">

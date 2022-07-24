@@ -25,7 +25,7 @@ const QuotesCard = () => {
     fetchUsers();
   }, []);
   return (
-    <div className="follow-card p-3">
+    <div className="quotes-card p-3">
       <h4 className="bold-h4">QuotesCard</h4>
       {quotes.map((f) => (
         <div

@@ -32,7 +32,6 @@ const AddPost = ({ user }) => {
           name="post"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          id=""
         ></textarea>
       </div>
       <div className="button-row row">
@@ -42,15 +41,15 @@ const AddPost = ({ user }) => {
             <span> Photo</span>
           </button>
           <button className="btn btn-dark text-light m-2">
-            <FaImage />
+            <FaVideo />
             <span> Video</span>
           </button>
           <button className="btn btn-primary m-2">
-            <FaImage />
+            <FaNewspaper />
             <span> Events</span>
           </button>
           <button className="btn btn-warning m-2">
-            <FaImage />
+            <FaBasketballBall />
             <span> Feeling/Activity</span>
           </button>
         </div>

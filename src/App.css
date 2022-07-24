@@ -1,8 +1,9 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 .full-view {
-  height: 135vh;
+  height: 145vh;
   width: 100vw;
+  /* border: 3px solid blue; */
   /* background: red; */
   position: relative;
   overflow: hidden;
@@ -10,4 +11,11 @@
 
 li {
   list-style: none;
+}
+
+@media screen and (max-width: 865px) {
+  .full-view {
+    height: 100%;
+    overflow: auto;
+  }
 }

@@ -5,9 +5,9 @@ import {
   collection,
   addDoc,
   onSnapshot,
-  doc,
   query,
   serverTimestamp,
+  deleteDoc,
 } from "firebase/firestore";
 
 const AuthContext = createContext();
@@ -84,6 +84,10 @@ export const AuthProvider = ({ children }) => {
     }
     await addDoc(collection(db, "bs-stories"), post);
     console.log("new doc added");
+  };
+
+  const delete_post = (post) => {
+    deleteDoc(collection(db, "bs-stories"), post.id);
   };
 
   const value = {

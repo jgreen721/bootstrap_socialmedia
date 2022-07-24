@@ -68,7 +68,18 @@
   border-top: 2px solid lightgray;
 }
 
+/*QuotesCard*/
+.quotes-card {
+  overflow: auto;
+  position: relative;
+  height: 50%;
+}
+
 /*FollowCard */
+
+.follow-card {
+  height: 45%;
+}
 
 .bold-h4 {
   font-weight: 800;
@@ -155,11 +166,12 @@
 .posts-parent-container {
   position: relative;
   height: 50%;
+  /* border: 4px solid red; */
   /* border: 2px solid red; */
 }
 
 .posts-container {
-  height: 75%;
+  height: 100%;
   overflow: auto;
 }
 
@@ -205,7 +217,7 @@
 
   .follow-card {
     width: 100%;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     text-align: center;
   }
 
@@ -225,6 +237,10 @@
     border-radius: 100px;
     box-shadow: 3px 5px 8px gray;
   }
+
+  /* .posts-parent-container {
+    height: 25%;
+  } */
 }
 
 @media screen and (max-width: 450px) {

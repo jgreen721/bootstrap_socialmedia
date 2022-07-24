@@ -3,11 +3,17 @@ import { FaCircle, FaLike } from "react-icons/fa";
 import { useAuth } from "../../../context/AuthContext";
 
 const Posts = () => {
-  const { posts } = useAuth();
+  const { posts, user, delete_post } = useAuth();
   console.log(posts);
 
-  const handleDelete = () => {
+  const handleDelete = (post) => {
     console.log("handle Delete fired!");
+    if (post.user.id !== user.id) {
+      console.log("dont have delete permission!");
+    } else {
+      console.log("delete away!");
+      delete_post(post);
+    }
   };
   return (
     <div className="posts-parent-container">
