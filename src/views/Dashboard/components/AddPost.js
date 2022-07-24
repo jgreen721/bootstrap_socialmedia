@@ -21,6 +21,7 @@ const AddPost = ({ user }) => {
     };
     console.log(messageObj);
     addpost(messageObj);
+    setMessage("");
   };
   return (
     <div className="p-2 addpost-container">
