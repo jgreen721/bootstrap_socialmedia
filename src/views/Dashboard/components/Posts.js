@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCircle, FaLike } from "react-icons/fa";
+// import { FaCircle, FaLike } from "react-icons/fa";
 import { useAuth } from "../../../context/AuthContext";
 
 const Posts = () => {

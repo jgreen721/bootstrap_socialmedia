@@ -1,12 +1,16 @@
 import React from "react";
-import { FaSignOutAlt, FaComment, FaWrench } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import { useAuth } from "../../../context/AuthContext";
 const Navbar = ({ user }) => {
   const { signout } = useAuth();
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark p-3">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a
+          className="navbar-brand"
+          href="https://www.jgreendev721.com"
+          _target="blank"
+        >
           {user?.displayName}
         </a>
         <form className="d-flex" role="search">
@@ -34,19 +38,23 @@ const Navbar = ({ user }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="https://www.jgreendev721.com"
+              >
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="https://www.jgreendev721.com">
                 Link
               </a>
             </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
+                href="https://www.jgreendev721.com"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -54,13 +62,19 @@ const Navbar = ({ user }) => {
                 Dropdown
               </a>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
+                <li className="text-primary">
+                  <a
+                    className="dropdown-item"
+                    href="https://www.jgreendev721.com"
+                  >
                     Action
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a
+                    className="dropdown-item"
+                    href="https://www.jgreendev721.com"
+                  >
                     Another action
                   </a>
                 </li>
@@ -68,7 +82,10 @@ const Navbar = ({ user }) => {
                   <hr className="dropdown-divider"></hr>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a
+                    className="dropdown-item"
+                    href="https://www.jgreendev721.com"
+                  >
                     Something else here
                   </a>
                 </li>

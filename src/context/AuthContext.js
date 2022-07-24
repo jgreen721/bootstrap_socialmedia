@@ -96,6 +96,7 @@ export const AuthProvider = ({ children }) => {
     signin,
     signout,
     addpost,
+    delete_post,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
