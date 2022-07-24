@@ -1,0 +1,270 @@
+.main-content-container {
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  height: 100%;
+}
+
+.column {
+  /* border: 2px solid blue; */
+}
+
+.small-column {
+  width: 25%;
+}
+
+.large-column {
+  width: 50%;
+  /* height: 100%; */
+}
+
+/*UserCard and 1st COLUMN */
+
+.user-card-hero {
+  height: 3rem;
+}
+
+.user-hero-img {
+  height: 100%;
+  width: 100%;
+}
+
+.user-card-user-info {
+  transform: translateY(-1.75rem);
+}
+
+.user-stats-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.stat-col {
+  height: 3rem;
+  width: 33%;
+}
+
+.stat-col p {
+  font-size: 0.75rem;
+}
+
+.border-col {
+  border-right: 3px solid gray;
+}
+
+.linkcard {
+  text-align: center;
+
+  padding: 0.5em;
+}
+
+.link-item {
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.link-div {
+  border-top: 2px solid lightgray;
+}
+
+/*FollowCard */
+
+.bold-h4 {
+  font-weight: 800;
+}
+
+.follower-img {
+  height: 3em;
+  width: 3em;
+  box-shadow: 2px 3px 8px gray;
+  border-radius: 50%;
+}
+
+.email-p {
+  position: relative;
+}
+
+.email-p:hover::after {
+  content: attr(data-email);
+  position: absolute;
+  top: 85%;
+  left: -25%;
+  /* width: 185px; */
+  height: 50px;
+  background: white;
+  padding: 1em;
+  border-radius: 100px;
+  box-shadow: 3px 5px 8px gray;
+}
+
+.add-btn {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(185, 185, 243);
+  transition: 0.3s ease;
+  color: white;
+  border: none;
+}
+
+.add-btn:hover {
+  background: rgb(40, 40, 247);
+}
+
+/*Stories */
+
+.story-name {
+  transform: translate(0.25rem, -1.25rem);
+  font-size: 0.85rem;
+  text-shadow: 2px 1px 3px black;
+}
+
+.story-img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 3px 3px 8px rgb(202, 186, 186);
+}
+
+/*AddPost */
+
+.addpost-container {
+  position: relative;
+}
+
+.post-user-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.75rem;
+  left: 1rem;
+}
+
+.addpost-input {
+  height: 8rem;
+  padding: 2em;
+}
+
+/*POSTS */
+
+.posts-parent-container {
+  position: relative;
+  height: 50%;
+  /* border: 2px solid red; */
+}
+
+.posts-container {
+  height: 75%;
+  overflow: auto;
+}
+
+.delete {
+  transform: translateY(-1.5rem);
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+.delete:hover {
+  opacity: 75%;
+}
+
+.post-img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 855px) {
+  .main-content-container {
+    flex-direction: column;
+    padding: 2em;
+  }
+
+  .user-card-hero {
+    height: 8rem;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .linkcard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .link-item:last-child {
+    /* border: 3px solid red; */
+    transform: translateX(110%);
+  }
+
+  .follow-card {
+    width: 100%;
+    border: 2px solid blue;
+    text-align: center;
+  }
+
+  .follower-item {
+    width: 100%;
+  }
+
+  .email-p:hover::after {
+    content: attr(data-email);
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    /* width: 185px; */
+    height: 50px;
+    background: white;
+    padding: 1em;
+    border-radius: 100px;
+    box-shadow: 3px 5px 8px gray;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .linkcard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 0;
+  }
+
+  .link-item {
+    flex-direction: column;
+    text-align: center;
+    /* border: 2px solid red; */
+  }
+
+  .link-item:last-child {
+    /* border: 3px solid red; */
+    transform: translateX(60%);
+  }
+
+  .email-p:hover::after {
+    content: attr(data-email);
+    position: absolute;
+    top: 5%;
+    left: -15%;
+    /* width: 185px; */
+    height: 50px;
+    background: white;
+    padding: 1em;
+    border-radius: 100px;
+    box-shadow: 3px 5px 8px gray;
+  }
+
+  .addpost-btn {
+    width: 50%;
+  }
+}
+
+.link-item:hover {
+  text-decoration: underline;
+  font-weight: 900;
+}

@@ -1,0 +1,58 @@
+.translate-left {
+  transform: translateX(-40%);
+}
+
+.translate-right {
+  transform: translateX(50%);
+}
+
+.footer-icon {
+  font-size: 2rem;
+  color: rgb(230, 15, 230);
+}
+
+.react {
+  color: rgb(12, 175, 250);
+}
+
+.firebase {
+  color: rgb(250, 68, 12);
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* border: 3px solid red; */
+  top: 0;
+  left: 0;
+  /* z-index: 10; */
+  /* opacity: 25%; */
+}
+
+.overlay-img {
+  height: 100%;
+  width: 100%;
+  opacity: 100%;
+}
+
+.overlay-tint {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 5px solid green; */
+  background: black;
+  opacity: 75%;
+}
+
+.full-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.z-3 {
+  z-index: 10;
+}
