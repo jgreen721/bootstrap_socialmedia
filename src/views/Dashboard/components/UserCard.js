@@ -23,10 +23,11 @@ const UserCard = ({ user }) => {
         <p className="m-0 opacity-50">
           <strong>Coding/Web-development</strong>
         </p>
-        <p>
+        {/* <p>
           "Don't let me find a <em>vector</em> to{" "}
           <span className="text-danger">escalate</span> privileges...😈"
-        </p>
+        </p> */}
+        <strong>Hello World \n 😎</strong>
       </div>
       <div className="user-stats-row p-3">
         <div className="stat-col border-col text-center">

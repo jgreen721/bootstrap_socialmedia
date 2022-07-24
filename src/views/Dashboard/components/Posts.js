@@ -79,18 +79,18 @@ const Posts = () => {
                 </span>
               </div>
               <div className="d-flex bg-dark p-2 justify-content-start align-items-center">
-                <button className="btn btn-success mx-3">
+                <button className="btn btn-success mx-2">
                   <FaThumbsUp onClick={() => handleAddLike(p.id, p.likes)} />
                 </button>
-                <button className="btn btn-warning text-light mx-3">
+                <button className="btn btn-warning text-light mx-2">
                   <FaThumbsDown
                     onClick={() => handleDisLike(p.id, p?.dislikes)}
                   />
                 </button>
-                <button className="btn btn-info text-light mx-3 disabled">
+                <button className="btn btn-info text-light mx-2 disabled">
                   <FaComment />
                 </button>
-                <button className="btn btn-danger text-light mx-3 disabled">
+                <button className="btn btn-danger text-light mx-2 disabled">
                   <FaExclamation />
                 </button>
               </div>

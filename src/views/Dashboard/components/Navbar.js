@@ -6,6 +6,15 @@ const Navbar = ({ user }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark p-3">
       <div className="container-fluid">
+        {/* <li className="nav-item mt-2">
+          <p
+            style={{ transform: "rotate(180deg)translateY(-.5rem)" }}
+            onClick={signout}
+            className="nav-link text-light"
+          >
+            <FaSignOutAlt />
+          </p>
+        </li> */}
         <a
           className="navbar-brand"
           href="https://www.jgreendev721.com"
@@ -43,12 +52,12 @@ const Navbar = ({ user }) => {
                 aria-current="page"
                 href="https://www.jgreendev721.com"
               >
-                Home
+                Portfolio Site
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="https://www.jgreendev721.com">
-                Link
+            <li className="d-md-none nav-item">
+              <a onClick={signout} className="nav-link">
+                Logout
               </a>
             </li>
             <li className="nav-item dropdown">

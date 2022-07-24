@@ -10,6 +10,7 @@ const FollowCard = () => {
         console.log(data);
         data = data.results;
         localStorage.setItem("follow-candidates", JSON.stringify(data));
+        setFollowers(data.results);
       } else {
         // console.log("some folks down in LS");
         setFollowers(

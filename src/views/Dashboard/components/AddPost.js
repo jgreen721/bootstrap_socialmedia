@@ -36,19 +36,19 @@ const AddPost = ({ user }) => {
       </div>
       <div className="button-row row">
         <div className="col-md-8">
-          <button className="btn btn-danger m-2">
+          <button className="btn btn-danger m-2" disabled>
             <FaImage />
             <span> Photo</span>
           </button>
-          <button className="btn btn-dark text-light m-2">
+          <button className="btn btn-dark text-light m-2" disabled>
             <FaVideo />
             <span> Video</span>
           </button>
-          <button className="btn btn-primary m-2">
+          <button className="btn btn-primary m-2" disabled>
             <FaNewspaper />
             <span> Events</span>
           </button>
-          <button className="btn btn-warning m-2">
+          <button className="btn btn-warning m-2" disabled>
             <FaBasketballBall />
             <span> Feeling/Activity</span>
           </button>
