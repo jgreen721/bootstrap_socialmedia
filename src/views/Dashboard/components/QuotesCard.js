@@ -15,10 +15,12 @@ const QuotesCard = () => {
         }
         console.log(temp_quotes);
         localStorage.setItem("quotes", JSON.stringify(temp_quotes));
+        return temp_quotes;
       } else {
         console.log("some quotes down in LS");
         setQuotes(JSON.parse(localStorage.getItem("quotes")));
         console.log(quotes);
+        return quotes;
       }
     }
 

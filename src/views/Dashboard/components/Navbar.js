@@ -93,9 +93,9 @@ const Navbar = ({ user }) => {
             </li>
 
             <li className="nav-item">
-              <a onClick={signout} className="nav-link">
+              <p onClick={signout} className="nav-link">
                 <FaSignOutAlt />
-              </a>
+              </p>
             </li>
           </ul>
         </div>
