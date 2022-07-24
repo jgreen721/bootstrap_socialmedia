@@ -15,9 +15,10 @@ const Login = () => {
   const handleSignin = () => {
     console.log("signIn fired");
     signin();
+    navigate("/");
   };
   return (
-    <div className="full-view relative">
+    <div className="login-view relative">
       <div className="overlay">
         <img
           className="overlay-img"

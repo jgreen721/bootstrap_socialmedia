@@ -54,7 +54,7 @@ const Navbar = ({ user }) => {
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="https://www.jgreendev721.com"
+                href="https://jgreendev721.com"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -63,18 +63,12 @@ const Navbar = ({ user }) => {
               </a>
               <ul className="dropdown-menu">
                 <li className="text-primary">
-                  <a
-                    className="dropdown-item"
-                    href="https://www.jgreendev721.com"
-                  >
+                  <a className="dropdown-item" href="https://jgreendev721.com">
                     Action
                   </a>
                 </li>
                 <li>
-                  <a
-                    className="dropdown-item"
-                    href="https://www.jgreendev721.com"
-                  >
+                  <a className="dropdown-item" href="https://jgreendev721.com">
                     Another action
                   </a>
                 </li>
@@ -82,10 +76,7 @@ const Navbar = ({ user }) => {
                   <hr className="dropdown-divider"></hr>
                 </li>
                 <li>
-                  <a
-                    className="dropdown-item"
-                    href="https://www.jgreendev721.com"
-                  >
+                  <a className="dropdown-item" href="https://jgreendev721.com">
                     Something else here
                   </a>
                 </li>

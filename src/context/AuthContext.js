@@ -6,9 +6,12 @@ import {
   addDoc,
   onSnapshot,
   query,
+  setDoc,
+  doc,
   serverTimestamp,
   deleteDoc,
 } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
@@ -19,6 +22,7 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState();
   const [posts, setPosts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!localStorage.user) {
@@ -33,7 +37,7 @@ export const AuthProvider = ({ children }) => {
           };
           console.log("HelloUser", currUser);
           setUser(currUser);
-          localStorage.setItem("user", JSON.stringify(user));
+          // localStorage.setItem("user", JSON.stringify(user));
         } else {
           console.log("sign in!");
         }
@@ -87,7 +91,20 @@ export const AuthProvider = ({ children }) => {
   };
 
   const delete_post = (post) => {
-    deleteDoc(collection(db, "bs-stories"), post.id);
+    console.log(post);
+    deleteDoc(doc(db, "bs-stories", post.id));
+  };
+
+  const addlike = (id, likes) => {
+    const storyRef = doc(db, "bs-stories", id);
+    setDoc(storyRef, { likes }, { merge: true });
+    console.log("doc was updated?");
+  };
+
+  const adddislike = (id, dislikes) => {
+    const storyRef = doc(db, "bs-stories", id);
+    setDoc(storyRef, { dislikes }, { merge: true });
+    console.log("doc was updated?");
   };
 
   const value = {
@@ -97,6 +114,8 @@ export const AuthProvider = ({ children }) => {
     signout,
     addpost,
     delete_post,
+    addlike,
+    adddislike,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

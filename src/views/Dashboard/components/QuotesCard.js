@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const QuotesCard = () => {
   const [quotes, setQuotes] = useState([]);
   useEffect(() => {
-    async function fetchUsers() {
+    async function fetchQuotes() {
       if (!localStorage["quotes"]) {
         var temp_quotes = [];
 
@@ -15,6 +15,7 @@ const QuotesCard = () => {
         }
         console.log(temp_quotes);
         localStorage.setItem("quotes", JSON.stringify(temp_quotes));
+        setQuotes(temp_quotes);
         return temp_quotes;
       } else {
         console.log("some quotes down in LS");
@@ -24,11 +25,34 @@ const QuotesCard = () => {
       }
     }
 
-    fetchUsers();
+    fetchQuotes();
   }, []);
+
+  const refreshQuotes = async () => {
+    var temp_quotes = [];
+
+    for (let i = 0; i < 5; i++) {
+      let response = await fetch("https://api.adviceslip.com/advice");
+      let data = await response.json();
+      console.log(data);
+      temp_quotes.push({ id: data.slip.id, quote: data.slip.advice });
+    }
+    console.log(temp_quotes);
+    localStorage.setItem("quotes", JSON.stringify(temp_quotes));
+    setQuotes(temp_quotes);
+  };
   return (
     <div className="quotes-card p-3">
-      <h4 className="bold-h4">QuotesCard</h4>
+      <div className="d-flex align-items-center">
+        <h4 className="bold-h4">QuotesCard -</h4>
+        <button
+          disabled
+          onClick={refreshQuotes}
+          className="text-primary ms-3 mb-2 border-0 bg-transparent"
+        >
+          Refresh
+        </button>
+      </div>
       {quotes.map((f) => (
         <div
           className="m-1 d-flex flex-column align-items-start justify-content-between follower-item"
